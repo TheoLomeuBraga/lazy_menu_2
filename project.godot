@@ -10,19 +10,18 @@ config_version=5
 
 [application]
 
-config/name="lazy_menu_2.0"
-config/custom_user_dir_name="lazy_menu_2.0_demo"
+config/name="lazy_menu_2"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/lazy_menu_2.0/plugin.cfg")
+enabled=PackedStringArray("res://addons/lazy_menu_2/plugin.cfg")
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://addons/lazy_menu_2.0/demos/translation/en.po", "res://addons/lazy_menu_2.0/demos/translation/pt_BR.po")
-locale/translations_pot_files=PackedStringArray("res://addons/lazy_menu_2.0/demos/lazy_config/lazy_config.tscn")
+locale/translations=PackedStringArray("res://addons/lazy_menu_2/demos/translation/en.po", "res://addons/lazy_menu_2/demos/translation/pt_BR.po")
+locale/translations_pot_files=PackedStringArray("res://addons/lazy_menu_2/demos/lazy_settings/lazy_settings_demo.tscn")
 
 [rendering]
 
