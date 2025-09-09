@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxvvrnmsy3hdy"]
+
+[ext_resource type="Script" uid="uid://hffix23yp3s1" path="res://addons/lazy_menu_2.0/lazy_config/elements/text/text.gd" id="1_qjung"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ampn"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="text" type="HBoxContainer"]
+anchors_preset = -1
+anchor_right = 0.129
+anchor_bottom = 0.069
+offset_right = -148.608
+offset_bottom = -44.712
+script = ExtResource("1_qjung")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "text"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="."]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_3ampn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="VSeparator2" type="VSeparator" parent="."]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_3ampn")

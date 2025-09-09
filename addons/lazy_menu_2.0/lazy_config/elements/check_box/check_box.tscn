@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmt40mvk4w3sg"]
+
+[ext_resource type="Script" uid="uid://b3y2kcutwqrvy" path="res://addons/lazy_menu_2.0/lazy_config/elements/check_box/check_box.gd" id="1_658wc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3r14n"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="check_box" type="HBoxContainer"]
+anchors_preset = -1
+anchor_right = 0.186
+anchor_bottom = 0.069
+offset_right = -214.272
+offset_bottom = -44.712
+script = ExtResource("1_658wc")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "check box"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="."]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_3r14n")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_3r14n")
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VSeparator2" type="VSeparator" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_3r14n")
+
+[node name="VSeparator2" type="VSeparator" parent="."]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_3r14n")

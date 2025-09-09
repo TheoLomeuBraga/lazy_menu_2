@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhafgaqw1b3p2"]
+
+[ext_resource type="Script" uid="uid://dylnp7wxhdhft" path="res://addons/lazy_menu_2.0/lazy_config/elements/slider/slider.gd" id="1_54uef"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ftmyk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="slider" type="HBoxContainer"]
+anchors_preset = -1
+anchor_right = 0.099
+anchor_bottom = 0.069
+offset_right = -114.048
+offset_bottom = -44.712
+script = ExtResource("1_54uef")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "slider"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="."]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_ftmyk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VSeparator2" type="VSeparator" parent="."]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_ftmyk")

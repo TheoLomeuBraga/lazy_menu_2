@@ -1,0 +1,66 @@
+# LANGUAGE translation for lazy_menu_2.0 for the following files:
+# res://addons/lazy_menu_2.0/demos/lazy_config.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: lazy_menu_2.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+
+#: addons/lazy_menu_2.0/demos/lazy_config.tscn
+msgid "Base"
+msgstr ""
+
+#: addons/lazy_menu_2.0/demos/lazy_config.tscn
+msgid "check box"
+msgstr "check box"
+
+#: addons/lazy_menu_2.0/demos/lazy_config.tscn
+msgid "check button"
+msgstr "check button"
+
+#: addons/lazy_menu_2.0/demos/lazy_config.tscn
+msgid "enum"
+msgstr "enum"
+
+#: addons/lazy_menu_2.0/demos/lazy_config.tscn
+msgid "Sword"
+msgstr "Sword"
+
+#: addons/lazy_menu_2.0/demos/lazy_config.tscn
+msgid "Potion"
+msgstr "Potion"
+
+#: addons/lazy_menu_2.0/demos/lazy_config.tscn
+msgid "Armor"
+msgstr "Armor"
+
+#: addons/lazy_menu_2.0/demos/lazy_config.tscn
+msgid "slider"
+msgstr "slider"
+
+#: addons/lazy_menu_2.0/demos/lazy_config.tscn
+msgid "text"
+msgstr "text"
+
+#: addons/lazy_menu_2.0/demos/lazy_config.tscn
+msgid "save"
+msgstr "save"
+
+#: addons/lazy_menu_2.0/demos/lazy_config.tscn
+msgid "default"
+msgstr "default"
+
+#: addons/lazy_menu_2.0/demos/lazy_config.tscn
+msgid "exit"
+msgstr "exit"

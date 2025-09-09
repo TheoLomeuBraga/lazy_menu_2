@@ -1,0 +1,81 @@
+# LANGUAGE translation for lazy_menu_2.0 for the following files:
+# res://addons/lazy_menu_2.0/demos/lazy_config.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: lazy_menu_2.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+
+#: addons/lazy_menu_2.0/demos/lazy_config/lazy_config.tscn
+msgid "Base"
+msgstr ""
+
+#: addons/lazy_menu_2.0/demos/lazy_config/lazy_config.tscn
+msgid "language"
+msgstr "linguagem"
+
+#: addons/lazy_menu_2.0/demos/lazy_config/lazy_config.tscn
+msgid "English"
+msgstr ""
+
+#: addons/lazy_menu_2.0/demos/lazy_config/lazy_config.tscn
+msgid "Portugues (Brasil)"
+msgstr ""
+
+#: addons/lazy_menu_2.0/demos/lazy_config/lazy_config.tscn
+msgid "Check Box"
+msgstr "caixa de checagem"
+
+#: addons/lazy_menu_2.0/demos/lazy_config/lazy_config.tscn
+msgid "Check Button"
+msgstr "botão de checagem"
+
+#: addons/lazy_menu_2.0/demos/lazy_config/lazy_config.tscn
+msgid "enum"
+msgstr "opções"
+
+#: addons/lazy_menu_2.0/demos/lazy_config/lazy_config.tscn
+msgid "Sword"
+msgstr "Espada"
+
+#: addons/lazy_menu_2.0/demos/lazy_config/lazy_config.tscn
+msgid "Potion"
+msgstr "Poção"
+
+#: addons/lazy_menu_2.0/demos/lazy_config/lazy_config.tscn
+msgid "Armor"
+msgstr "Armadura"
+
+#: addons/lazy_menu_2.0/demos/lazy_config/lazy_config.tscn
+msgid "slider"
+msgstr "slider"
+
+#: addons/lazy_menu_2.0/demos/lazy_config/lazy_config.tscn
+msgid "Text"
+msgstr "Texto"
+
+#: addons/lazy_menu_2.0/demos/lazy_config/lazy_config.tscn
+msgid "save"
+msgstr "salvar"
+
+#: addons/lazy_menu_2.0/demos/lazy_config/lazy_config.tscn
+msgid "default"
+msgstr "padrão"
+
+#: addons/lazy_menu_2.0/demos/lazy_config/lazy_config.tscn
+msgid "exit"
+msgstr "sair"
+
+#~ msgid "text"
+#~ msgstr "texto"

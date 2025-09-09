@@ -1,0 +1,386 @@
+[gd_scene load_steps=25 format=3 uid="uid://csi5sj2ff8l83"]
+
+[ext_resource type="Script" uid="uid://b5tqgcbmy2vry" path="res://addons/lazy_menu_2.0/demos/lazy_config/lazy_config_demo.gd" id="1_2nawb"]
+[ext_resource type="Script" uid="uid://cjyejnocrip05" path="res://addons/lazy_menu_2.0/lazy_config/lazy_config_builder.gd" id="1_2ni8h"]
+[ext_resource type="Script" uid="uid://csqjtk2nl2eyt" path="res://addons/lazy_menu_2.0/lazy_config/lazy_config_items/item_base.gd" id="2_2nawb"]
+[ext_resource type="Script" uid="uid://be1s2yx8wqxnn" path="res://addons/lazy_menu_2.0/lazy_config/lazy_config_items/enum.gd" id="3_tlwm0"]
+[ext_resource type="Script" uid="uid://ccbdyeh4purof" path="res://addons/lazy_menu_2.0/lazy_config/lazy_config_items/check_box.gd" id="4_q7s0l"]
+[ext_resource type="Script" uid="uid://68xw3ae1ovva" path="res://addons/lazy_menu_2.0/lazy_config/lazy_config_items/check_button.gd" id="5_10qbd"]
+[ext_resource type="Script" uid="uid://ys0nood1uiy0" path="res://addons/lazy_menu_2.0/lazy_config/lazy_config_items/slider.gd" id="6_8r647"]
+[ext_resource type="Script" uid="uid://cr7di2vie4qma" path="res://addons/lazy_menu_2.0/lazy_config/lazy_config_items/text.gd" id="7_0fo4w"]
+[ext_resource type="Script" uid="uid://duq2cifpb2te" path="res://addons/lazy_menu_2.0/lazy_config/elements/enum/enum.gd" id="8_b85p1"]
+[ext_resource type="Script" uid="uid://b3y2kcutwqrvy" path="res://addons/lazy_menu_2.0/lazy_config/elements/check_box/check_box.gd" id="9_t4qhf"]
+[ext_resource type="Script" uid="uid://blqxht6uc4f0w" path="res://addons/lazy_menu_2.0/lazy_config/elements/check_button/check_button.gd" id="10_n17r0"]
+[ext_resource type="Script" uid="uid://dylnp7wxhdhft" path="res://addons/lazy_menu_2.0/lazy_config/elements/slider/slider.gd" id="11_iyehl"]
+[ext_resource type="Script" uid="uid://hffix23yp3s1" path="res://addons/lazy_menu_2.0/lazy_config/elements/text/text.gd" id="12_jh6x3"]
+
+[sub_resource type="Resource" id="Resource_2cafu"]
+script = ExtResource("3_tlwm0")
+base_value = 0
+items = Array[String](["English", "Portugues (Brasil)"])
+title = "language"
+metadata/_custom_type_script = "uid://be1s2yx8wqxnn"
+
+[sub_resource type="Resource" id="Resource_wnss7"]
+script = ExtResource("4_q7s0l")
+base_value = true
+title = "Check Box"
+metadata/_custom_type_script = "uid://ccbdyeh4purof"
+
+[sub_resource type="Resource" id="Resource_7st4n"]
+script = ExtResource("5_10qbd")
+base_value = true
+title = "Check Button"
+metadata/_custom_type_script = "uid://68xw3ae1ovva"
+
+[sub_resource type="Resource" id="Resource_sx186"]
+script = ExtResource("3_tlwm0")
+base_value = 1
+items = Array[String](["Sword", "Potion", "Armor"])
+title = "enum"
+metadata/_custom_type_script = "uid://be1s2yx8wqxnn"
+
+[sub_resource type="Resource" id="Resource_ybycv"]
+script = ExtResource("6_8r647")
+base_value = 5.0
+min_value = 0.0
+max_value = 10.0
+step_value = 2.5
+title = "slider"
+metadata/_custom_type_script = "uid://ys0nood1uiy0"
+
+[sub_resource type="Resource" id="Resource_2pacp"]
+script = ExtResource("7_0fo4w")
+base_value = "Hello World"
+title = "Text"
+metadata/_custom_type_script = "uid://cr7di2vie4qma"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjxgn"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3r14n"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ts3o1"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ftmyk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ampn"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="LazyConfig" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2nawb")
+
+[node name="LazyConfigBuilder" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2ni8h")
+save_file_name = "lazy_menu_demo_config"
+menu_items = Array[ExtResource("2_2nawb")]([SubResource("Resource_2cafu"), SubResource("Resource_wnss7"), SubResource("Resource_7st4n"), SubResource("Resource_sx186"), SubResource("Resource_ybycv"), SubResource("Resource_2pacp")])
+metadata/_custom_type_script = "uid://cjyejnocrip05"
+
+[node name="Base" type="Control" parent="LazyConfigBuilder"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LazyConfigBuilder/Base"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="LazyConfigBuilder/Base/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Base"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="LazyConfigBuilder/Base/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="LazyConfigBuilder/Base/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="language" type="HBoxContainer" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("8_b85p1")
+metadata/_edit_use_anchors_ = true
+metadata/base_value = 0
+
+[node name="Label" type="Label" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/language"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "language"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/language"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_sjxgn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/language"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/language/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+selected = 0
+item_count = 2
+popup/item_0/text = "English"
+popup/item_0/id = 0
+popup/item_1/text = "Portugues (Brasil)"
+popup/item_1/id = 1
+
+[node name="VSeparator2" type="VSeparator" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/language"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_sjxgn")
+
+[node name="Check Box" type="HBoxContainer" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("9_t4qhf")
+metadata/_edit_use_anchors_ = true
+metadata/base_value = true
+
+[node name="Label" type="Label" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Check Box"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "Check Box"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Check Box"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_3r14n")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Check Box"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Check Box/VBoxContainer"]
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Check Box/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_3r14n")
+
+[node name="CheckBox" type="CheckBox" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Check Box/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+button_pressed = true
+
+[node name="VSeparator2" type="VSeparator" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Check Box/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_3r14n")
+
+[node name="VSeparator2" type="VSeparator" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Check Box"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_3r14n")
+
+[node name="Check Button" type="HBoxContainer" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("10_n17r0")
+metadata/_edit_use_anchors_ = true
+metadata/base_value = true
+
+[node name="Label" type="Label" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Check Button"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "Check Button"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Check Button"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_ts3o1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Check Button"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Check Button/VBoxContainer"]
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Check Button/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_ts3o1")
+
+[node name="CheckButton" type="CheckButton" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Check Button/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+button_pressed = true
+
+[node name="VSeparator2" type="VSeparator" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Check Button/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_ts3o1")
+
+[node name="VSeparator2" type="VSeparator" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Check Button"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_ts3o1")
+
+[node name="enum" type="HBoxContainer" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("8_b85p1")
+metadata/_edit_use_anchors_ = true
+metadata/base_value = 1
+
+[node name="Label" type="Label" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/enum"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "enum"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/enum"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_sjxgn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/enum"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/enum/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+selected = 1
+item_count = 3
+popup/item_0/text = "Sword"
+popup/item_0/id = 0
+popup/item_1/text = "Potion"
+popup/item_1/id = 1
+popup/item_2/text = "Armor"
+popup/item_2/id = 2
+
+[node name="VSeparator2" type="VSeparator" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/enum"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_sjxgn")
+
+[node name="slider" type="HBoxContainer" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("11_iyehl")
+metadata/_edit_use_anchors_ = true
+metadata/base_value = 5.0
+
+[node name="Label" type="Label" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/slider"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "slider"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/slider"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_ftmyk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/slider"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="HSlider" type="HSlider" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/slider/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 10.0
+step = 2.5
+value = 5.0
+
+[node name="VSeparator2" type="VSeparator" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/slider"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_ftmyk")
+
+[node name="Text" type="HBoxContainer" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("12_jh6x3")
+metadata/_edit_use_anchors_ = true
+metadata/base_value = "Hello World"
+
+[node name="Label" type="Label" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Text"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "Text"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Text"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_3ampn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Text"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Text/VBoxContainer"]
+layout_mode = 2
+text = "Hello World"
+
+[node name="VSeparator2" type="VSeparator" parent="LazyConfigBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/Text"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_3ampn")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LazyConfigBuilder/Base/VBoxContainer"]
+layout_mode = 2
+
+[node name="save" type="Button" parent="LazyConfigBuilder/Base/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "save"
+icon_alignment = 1
+
+[node name="default" type="Button" parent="LazyConfigBuilder/Base/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "default"
+icon_alignment = 1
+
+[node name="exit" type="Button" parent="LazyConfigBuilder/Base/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "exit"
+icon_alignment = 1
