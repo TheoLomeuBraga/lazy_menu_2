@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://d2ccn6ys8a4ir"]
+[gd_scene load_steps=4 format=3 uid="uid://d2ccn6ys8a4ir"]
+
+[ext_resource type="Script" uid="uid://nf643xx2m6ub" path="res://addons/lazy_menu_2/lazy_rebind/lazy_rebind_builder.gd" id="1_5d4oe"]
+[ext_resource type="Texture2D" uid="uid://qam2qfngmvgf" path="res://addons/lazy_menu_2/icon.svg" id="1_eh06d"]
+[ext_resource type="Script" uid="uid://bgkn26iinjbmi" path="res://addons/lazy_menu_2/demos/lazy_rebind/sprite_controller.gd" id="2_087ls"]
 
 [node name="LazyRebindDemo" type="Control"]
 layout_mode = 3
@@ -7,3 +11,173 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer"]
+texture_filter = 1
+position = Vector2(563.105, 175)
+scale = Vector2(4.81579, 4.81579)
+texture = ExtResource("1_eh06d")
+script = ExtResource("2_087ls")
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LazyRebindBuilderKeyboard" type="Control" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_5d4oe")
+save_file_name = "lazy_menu_bingings_demo"
+metadata/_custom_type_script = "uid://nf643xx2m6ub"
+
+[node name="Base" type="Control" parent="VBoxContainer/HBoxContainer/LazyRebindBuilderKeyboard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/LazyRebindBuilderKeyboard/Base"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/LazyRebindBuilderKeyboard/Base/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "keyboard"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="VBoxContainer/HBoxContainer/LazyRebindBuilderKeyboard/Base/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/HBoxContainer/LazyRebindBuilderKeyboard/Base/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/LazyRebindBuilderKeyboard/Base/VBoxContainer/Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/LazyRebindBuilderKeyboard/Base/VBoxContainer"]
+layout_mode = 2
+
+[node name="save" type="Button" parent="VBoxContainer/HBoxContainer/LazyRebindBuilderKeyboard/Base/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "save"
+icon_alignment = 1
+
+[node name="default" type="Button" parent="VBoxContainer/HBoxContainer/LazyRebindBuilderKeyboard/Base/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "default"
+icon_alignment = 1
+
+[node name="exit" type="Button" parent="VBoxContainer/HBoxContainer/LazyRebindBuilderKeyboard/Base/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "exit"
+icon_alignment = 1
+
+[node name="LazyRebindBuilderJoystick" type="Control" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_5d4oe")
+save_file_name = "lazy_menu_bingings_demo"
+key_rebind_type = 1
+metadata/_custom_type_script = "uid://nf643xx2m6ub"
+
+[node name="Base" type="Control" parent="VBoxContainer/HBoxContainer/LazyRebindBuilderJoystick"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/LazyRebindBuilderJoystick/Base"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/LazyRebindBuilderJoystick/Base/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Joystick"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="VBoxContainer/HBoxContainer/LazyRebindBuilderJoystick/Base/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/HBoxContainer/LazyRebindBuilderJoystick/Base/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/LazyRebindBuilderJoystick/Base/VBoxContainer/Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/LazyRebindBuilderJoystick/Base/VBoxContainer"]
+layout_mode = 2
+
+[node name="save" type="Button" parent="VBoxContainer/HBoxContainer/LazyRebindBuilderJoystick/Base/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "save"
+icon_alignment = 1
+
+[node name="default" type="Button" parent="VBoxContainer/HBoxContainer/LazyRebindBuilderJoystick/Base/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "default"
+icon_alignment = 1
+
+[node name="exit" type="Button" parent="VBoxContainer/HBoxContainer/LazyRebindBuilderJoystick/Base/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "exit"
+icon_alignment = 1

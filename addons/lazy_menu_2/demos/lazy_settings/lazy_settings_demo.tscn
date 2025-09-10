@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://csi5sj2ff8l83"]
 
 [ext_resource type="Script" uid="uid://b5tqgcbmy2vry" path="res://addons/lazy_menu_2/demos/lazy_settings/lazy_settings_demo.gd" id="1_1hwwk"]
-[ext_resource type="Script" uid="uid://cjyejnocrip05" path="res://addons/lazy_menu_2/lazy_settings/lazy_config_builder.gd" id="2_nw27r"]
+[ext_resource type="Script" uid="uid://cjyejnocrip05" path="res://addons/lazy_menu_2/lazy_settings/lazy_settings_builder.gd" id="2_nw27r"]
 [ext_resource type="Script" uid="uid://csqjtk2nl2eyt" path="res://addons/lazy_menu_2/lazy_settings/lazy_config_items/item_base.gd" id="3_f506k"]
 [ext_resource type="Script" uid="uid://be1s2yx8wqxnn" path="res://addons/lazy_menu_2/lazy_settings/lazy_config_items/enum.gd" id="4_vqavo"]
 [ext_resource type="Script" uid="uid://ccbdyeh4purof" path="res://addons/lazy_menu_2/lazy_settings/lazy_config_items/check_box.gd" id="5_3psr1"]

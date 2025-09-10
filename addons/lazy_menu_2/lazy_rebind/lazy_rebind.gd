@@ -1,0 +1,2 @@
+extends LazyMenu
+class_name LazyRebind

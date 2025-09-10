@@ -19,3 +19,7 @@ func _ready() -> void:
 	
 	$LazySettingsBuilder/Base/VBoxContainer/HBoxContainer/default.pressed.connect(change_language)
 	change_language()
+	
+	var data_dictionary : Dictionary = LazySettingsBuilder.load_data_dictionary("lazy_menu_demo_config")
+	for k in data_dictionary:
+		print(k," : ",data_dictionary[k])

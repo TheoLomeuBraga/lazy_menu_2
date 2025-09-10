@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://dglblhp74mqr4"]
+
+[ext_resource type="Script" uid="uid://bxooaw5cqf4v0" path="res://addons/lazy_menu_2/lazy_rebind/elements/key_rebinder.gd" id="1_hwe73"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5d4oe"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="KeyRebinder" type="HBoxContainer"]
+script = ExtResource("1_hwe73")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "Thing"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "Key"
+
+[node name="VSeparator2" type="VSeparator" parent="."]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_5d4oe")
