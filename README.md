@@ -20,5 +20,5 @@
 - create a LazyConsoleBuilder or LazyRebindBuilder or LazySettingsBuilder
 - configure the builder node
 - click in build on the 2D editor
-- Create a script so set it up
+- create a script to add behavior
 - remenber to set application -> config -> custom_user_dir_name on the settings
