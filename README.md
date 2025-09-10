@@ -6,9 +6,9 @@
 
 
 ## Features
-- automation for creating configuration menus
-- automation for key rebinding
-- automation for console creation
+- automation for creating settings menus
+- automation for creating key rebinding menus 
+- automation for creating consoles
 - demos for reference
 - localization suport
 
