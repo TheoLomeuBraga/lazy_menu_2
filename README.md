@@ -10,6 +10,7 @@
 - automation for key rebinding
 - automation for console creation
 - demos for reference
+- localization suport
 
 ![alt text](./menu.png)
 ![alt text](./console.png)
@@ -20,3 +21,4 @@
 - configure the builder node
 - click in build on the 2D editor
 - Create a script so set it up
+- remenber to set application -> config -> custom_user_dir_name on the settings

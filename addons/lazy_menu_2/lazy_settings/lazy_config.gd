@@ -1,2 +1,0 @@
-extends LazyMenu
-class_name LazySettings
