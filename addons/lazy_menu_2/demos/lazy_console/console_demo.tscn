@@ -1,0 +1,99 @@
+[gd_scene load_steps=8 format=3 uid="uid://or2xromx2m21"]
+
+[ext_resource type="Script" uid="uid://cg12tfaigbvno" path="res://addons/lazy_menu_2/demos/lazy_console/console_demo.gd" id="1_hfmxp"]
+[ext_resource type="Script" uid="uid://dsptyp6w54ern" path="res://addons/lazy_menu_2/lazy_console/lazy_console_builder.gd" id="1_nlra5"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hfmxp"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_0fham"]
+sky_material = SubResource("ProceduralSkyMaterial_hfmxp")
+
+[sub_resource type="Environment" id="Environment_c8tqc"]
+background_mode = 2
+sky = SubResource("Sky_0fham")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hfmxp"]
+resource_local_to_scene = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_s6bb1"]
+
+[node name="ConsoleDemo" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hfmxp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="VBoxContainer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1152, 322)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="VBoxContainer/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0.975234, -0.938041)
+fov = 90.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="VBoxContainer/SubViewportContainer/SubViewport"]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="VBoxContainer/SubViewportContainer/SubViewport"]
+environment = SubResource("Environment_c8tqc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="VBoxContainer/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+material_override = SubResource("StandardMaterial3D_hfmxp")
+mesh = SubResource("BoxMesh_s6bb1")
+
+[node name="LazyConsoleBuilder" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("1_nlra5")
+metadata/_custom_type_script = "uid://dsptyp6w54ern"
+
+[node name="Base" type="Panel" parent="VBoxContainer/LazyConsoleBuilder"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/LazyConsoleBuilder/Base"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/LazyConsoleBuilder/Base/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/LazyConsoleBuilder/Base/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/LazyConsoleBuilder/Base/VBoxContainer"]
+layout_mode = 2
+text = "help"
+keep_editing_on_text_submit = true

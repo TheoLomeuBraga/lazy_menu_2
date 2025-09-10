@@ -13,6 +13,9 @@ var lazy_menu_text_packed_scene : PackedScene = preload("res://addons/lazy_menu_
 var lazy_rebind_base_packed_scene : PackedScene = preload("res://addons/lazy_menu_2/lazy_rebind/base/base.tscn")
 var lazy_rebind_key_packed_scene : PackedScene = preload("res://addons/lazy_menu_2/lazy_rebind/elements/key_rebinder.tscn")
 
+var lazy_console_base_packed_scene : PackedScene = preload("res://addons/lazy_menu_2/lazy_console/base/base.tscn")
+var lazy_console_element_packed_scene : PackedScene = preload("res://addons/lazy_menu_2/lazy_console/element/element.tscn")
+
 func update_owner(n : Node) -> void:
 	
 	for c in n.get_children():
@@ -98,7 +101,17 @@ func build_rebind_menu(build_target : LazyRebindBuilder) -> void:
 	var elements_area : Control = base.get_node("VBoxContainer/Panel/ScrollContainer/VBoxContainer")
 	
 	update_owner(build_target)
+
+func build_console_menu(build_target : LazyConsoleBuilder) -> void:
+	print("building LazyConsole")
 	
+	var base : Control = lazy_console_base_packed_scene.instantiate()
+	build_target.add_child(base)
+	base.name = "Base"
+	
+	#TODO
+	
+	update_owner(build_target)
 
 var build_button : Button
 func build() -> void:
@@ -115,6 +128,8 @@ func build() -> void:
 		build_settings_menu(build_target)
 	elif build_target is LazyRebindBuilder:
 		build_rebind_menu(build_target)
+	elif build_target is  LazyConsoleBuilder:
+		build_console_menu(build_target)
 
 func remove_build_button() -> void:
 	if build_button.get_parent() != null:
@@ -125,7 +140,7 @@ func update_build_button() -> void:
 		
 		var first_node : Node = EditorInterface.get_selection().get_selected_nodes()[0]
 		
-		if first_node is LazySettingsBuilder or first_node is LazyRebindBuilder:
+		if first_node is LazySettingsBuilder or first_node is LazyRebindBuilder or first_node is LazyConsoleBuilder:
 			add_control_to_container(EditorPlugin.CONTAINER_CANVAS_EDITOR_MENU, build_button)
 		else:
 			remove_build_button()

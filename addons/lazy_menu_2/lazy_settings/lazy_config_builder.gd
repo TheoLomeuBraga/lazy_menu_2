@@ -6,6 +6,14 @@ class_name LazySettingsBuilder
 
 signal exit()
 
+static func load_data_dictionary(file_name : String) -> Dictionary:
+	var save_file : FileAccess = FileAccess.open("user://" + file_name + ".cfg", FileAccess.READ)
+	
+	if save_file == null:
+		return {}
+	
+	return save_file.get_var()
+
 func set_base_value() -> void:
 	for c in $Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer.get_children():
 		if c is LazySettingsElement:
@@ -32,6 +40,8 @@ func load_data() -> void:
 	for c in $Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer.get_children():
 		if c is LazySettingsElement:
 			c._set_value(data_dictionary[c.name])
+
+
 
 func _ready() -> void:
 	$Base/VBoxContainer/HBoxContainer/save.pressed.connect(save)

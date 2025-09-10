@@ -42,14 +42,13 @@ func update_button_text() -> void:
 				input_event = i
 		
 		if input_event != null:
-			#get_node("VBoxContainer/HBoxContainer/Button").text = input_event.as_text().split(" ")[0]
+			
 			if input_event is InputEventKey:
 				get_node("VBoxContainer/HBoxContainer/Button").text = input_event.as_text().split(" ")[0]
 			elif input_event is InputEventJoypadButton:
 				var names : PackedStringArray = input_event.as_text().split(" ")
 				var key_display_name : String
 				for i in range(3,names.size()):
-					print(names[i])
 					key_display_name += names[i] + " "
 				
 				
@@ -59,7 +58,6 @@ func update_button_text() -> void:
 				var names : PackedStringArray = input_event.as_text().split(" ")
 				var key_display_name : String
 				for i in range(5,min(names.size(),11)):
-					print(names[i])
 					key_display_name += names[i] + " "
 				
 				get_node("VBoxContainer/HBoxContainer/Button").text = key_display_name.erase(key_display_name.length() - 2,2).erase(0)
@@ -75,7 +73,6 @@ func check_joystick_motion_is_valid(event : InputEventJoypadMotion) -> bool:
 	
 	
 	if abs(event.axis_value) > 0.8:
-		print(event.axis_value)
 		return true
 	
 	return false
