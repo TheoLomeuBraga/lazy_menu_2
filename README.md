@@ -7,11 +7,16 @@
 
 ## Features
 - automation for creating configuration menus
-  ![alt text](./menu.png)
 - automation for key rebinding
-  ![alt text](./rebind.png)
 - automation for console creation
-  ![alt text](./console.png)
 - demos for reference
 
-## How use 
+![alt text](./menu.png)
+![alt text](./console.png)
+![alt text](./rebind.png)
+
+## How use
+- create a LazyConsoleBuilder or LazyRebindBuilder or LazySettingsBuilder
+- configure the builder node
+- click in build on the 2D editor
+- Create a script so set it up
