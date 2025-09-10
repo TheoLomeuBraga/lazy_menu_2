@@ -1,4 +1,4 @@
-### Lazy Menu 2
+# Lazy Menu 2
 
 ## A lazy plugin for lazy people to create lazy menus.
 ![alt text](./video_demo.gif)
