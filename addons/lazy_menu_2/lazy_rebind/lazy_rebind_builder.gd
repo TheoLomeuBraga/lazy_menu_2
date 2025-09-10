@@ -64,7 +64,6 @@ static func load_binds(file_name : String) -> Dictionary:
 		for e in bindi_dictionary[k]:
 			
 			InputMap.action_add_event(k,e)
-			print(e)
 	
 	return bindi_dictionary
 
