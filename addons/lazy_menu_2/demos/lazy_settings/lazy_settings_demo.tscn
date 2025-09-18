@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://csi5sj2ff8l83"]
+[gd_scene load_steps=26 format=3 uid="uid://csi5sj2ff8l83"]
 
 [ext_resource type="Script" uid="uid://b5tqgcbmy2vry" path="res://addons/lazy_menu_2/demos/lazy_settings/lazy_settings_demo.gd" id="1_1hwwk"]
 [ext_resource type="Script" uid="uid://cjyejnocrip05" path="res://addons/lazy_menu_2/lazy_settings/lazy_settings_builder.gd" id="2_nw27r"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://blqxht6uc4f0w" path="res://addons/lazy_menu_2/lazy_settings/elements/check_button/check_button.gd" id="11_yatrq"]
 [ext_resource type="Script" uid="uid://dylnp7wxhdhft" path="res://addons/lazy_menu_2/lazy_settings/elements/slider/slider.gd" id="12_06rux"]
 [ext_resource type="Script" uid="uid://hffix23yp3s1" path="res://addons/lazy_menu_2/lazy_settings/elements/text/text.gd" id="13_hbjf7"]
+[ext_resource type="Script" uid="uid://csm8ydliarro5" path="res://addons/lazy_menu_2/lazy_settings/elements/slider/no_display.gd" id="13_nw27r"]
 
 [sub_resource type="Resource" id="Resource_2cafu"]
 script = ExtResource("4_vqavo")
@@ -43,7 +44,6 @@ metadata/_custom_type_script = "uid://be1s2yx8wqxnn"
 [sub_resource type="Resource" id="Resource_ybycv"]
 script = ExtResource("7_uw5ob")
 base_value = 5.0
-min_value = 0.0
 max_value = 10.0
 step_value = 2.5
 title = "slider"
@@ -110,7 +110,7 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="LazySettingsBuilder/Base/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
-text = "Settings"
+text = "Base"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -313,6 +313,14 @@ vertical_alignment = 1
 [node name="VSeparator" type="VSeparator" parent="LazySettingsBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/slider"]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_ftmyk")
+
+[node name="no_display" type="Label" parent="LazySettingsBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/slider"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "000"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("13_nw27r")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="LazySettingsBuilder/Base/VBoxContainer/Panel/ScrollContainer/VBoxContainer/slider"]
 layout_mode = 2
